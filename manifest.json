@@ -1,0 +1,46 @@
+{
+    "name": "Dart Debug Extension MV3 Prototype",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+        "default_icon": "dart_grey.png"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "debugger",
+        "tabs",
+        "scripting",
+        "notifications"
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "resources": [
+                "iframe.html",
+                "debugInfo.js",
+                "shared.js",
+                "detector.js",
+                "injector.js"
+            ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "detectorLoader.js"
+            ],
+            "run_at": "document_end"
+        }   
+    ]
+}
