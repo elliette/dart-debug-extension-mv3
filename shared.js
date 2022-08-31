@@ -3,7 +3,8 @@ export const scripts = {
     DEBUG_INFO: 'debug-info-script',
     DETECTOR: 'detector-script',
     IFRAME: 'iframe-script',
-    INJECTOR: 'injector-script'
+    INJECTOR: 'injector-script',
+    DEBUG_CONNECTION: 'debug-connection'
 };
 
 export class Message {
